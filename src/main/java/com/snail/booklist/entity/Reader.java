@@ -23,6 +23,8 @@ import java.util.Collection;
 public class Reader implements UserDetails {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String userName;
     private String password;
     private String fullName;

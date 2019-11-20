@@ -1,6 +1,32 @@
 spring:
   thymeleaf:
     cache: false
+  #数据源和jpa配置
+  datasource:
+    #数据库相关的配置url  -SSL连接设置为false
+    url: jdbc:mysql://122.51.9.222:3306/readlist
+    #配置用户名
+    username: root
+    #配置密码
+    password: 123456
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/readlist
+#    password: root
+#    username: 123
+#    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    #配置数据库类型
+    database: MYSQL
+    #配置是否打印sql
+    show-sql: true
+    #Hibernate相关配置
+    hibernate:
+      #配置级联等级
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
 
 server:
   port: 8080
